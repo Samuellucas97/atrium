@@ -193,7 +193,6 @@ class DefaultPathAssertions : PathAssertions {
 
     override fun <T : Path> toBeAnEmptyDirectory(container: AssertionContainer<T>, expected: Path): Assertion {
         TODO("Not yet implemented")
-
 //        Files.newDirectoryStream(expected) {}
     }
 }

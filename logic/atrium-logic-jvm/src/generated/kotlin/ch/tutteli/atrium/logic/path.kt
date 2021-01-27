@@ -50,6 +50,8 @@ fun <T : Path> AssertionContainer<T>.resolve(other: String): FeatureExtractorBui
 
 fun <T : Path> AssertionContainer<T>.hasDirectoryEntry(entries: List<String>): Assertion = impl.hasDirectoryEntry(this, entries)
 
+fun <T: Path> AssertionContainer<T>.toBeAnEmptyDirectory(expected: Path): Assertion = impl.toBeAnEmptyDirectory(this, expected)
+
 @Suppress("DEPRECATION" /* OptIn is only available since 1.3.70 which we cannot use if we want to support 1.2 */)
 @UseExperimental(ExperimentalNewExpectTypes::class)
 private inline val <T> AssertionContainer<T>.impl: PathAssertions

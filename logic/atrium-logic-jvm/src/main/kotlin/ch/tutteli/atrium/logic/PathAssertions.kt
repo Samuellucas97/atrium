@@ -32,6 +32,8 @@ interface PathAssertions {
     fun <T : Path> isAbsolute(container: AssertionContainer<T>): Assertion
     fun <T : Path> isRelative(container: AssertionContainer<T>): Assertion
 
+    fun <T: Path> toBeAnEmptyDirectory(container: AssertionContainer<T>, expected: Path): Assertion
+
     fun <T : Path> hasSameTextualContentAs(
         container: AssertionContainer<T>,
         targetPath: Path,
@@ -52,5 +54,4 @@ interface PathAssertions {
 
     fun <T : Path> hasDirectoryEntry(container: AssertionContainer<T>, entries: List<String>): Assertion
 
-    fun <T: Path> toBeAnEmptyDirectory(container: AssertionContainer<T>, expected: Path): Assertion
 }
