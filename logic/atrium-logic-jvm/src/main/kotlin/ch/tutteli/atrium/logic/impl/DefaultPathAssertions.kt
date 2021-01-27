@@ -190,4 +190,10 @@ class DefaultPathAssertions : PathAssertions {
                     container.resolve(entry).collect { _logicAppend { exists(NOFOLLOW_LINKS) } }
                 }
         ).build()
+
+    override fun <T : Path> toBeAnEmptyDirectory(container: AssertionContainer<T>, expected: Path): Assertion {
+        TODO("Not yet implemented")
+
+//        Files.newDirectoryStream(expected) {}
+    }
 }
